@@ -38,7 +38,7 @@ public class Dashboard extends javax.swing.JFrame {
         InitContent();
     }
     private void ShowJPanel(JPanel p){
-        p.setSize(750, 430);
+        p.setSize(960, 620);
         p.setLocation(0, 0);
         Content.removeAll();
         Content.add(p, BorderLayout.CENTER);
