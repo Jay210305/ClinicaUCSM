@@ -31,6 +31,10 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
         DocIdLabelInput = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         ConfrimacionInsertLabel = new javax.swing.JLabel();
+        AMaternoLabel = new javax.swing.JLabel();
+        AMaternoInput = new javax.swing.JTextField();
+        TelefonoLabel = new javax.swing.JLabel();
+        TelefonoLabelInput = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -103,6 +107,24 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
 
         ConfrimacionInsertLabel.setText("jLabel1");
 
+        AMaternoLabel.setText("Apellido Materno");
+
+        AMaternoInput.setPreferredSize(new java.awt.Dimension(325, 35));
+        AMaternoInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AMaternoInputActionPerformed(evt);
+            }
+        });
+
+        TelefonoLabel.setText("Teléfono");
+
+        TelefonoLabelInput.setPreferredSize(new java.awt.Dimension(325, 35));
+        TelefonoLabelInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelefonoLabelInputActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
         BackgroundLayout.setHorizontalGroup(
@@ -118,25 +140,39 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
                 .addGap(62, 62, 62)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addComponent(ConfrimacionInsertLabel)
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AMaternoInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(NombresInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(APaternoInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BackgroundLayout.createSequentialGroup()
+                                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(NombresLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(APaternoLabel, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(115, 115, 115))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AMaternoLabel)
+                            .addComponent(ConfrimacionInsertLabel)
+                            .addGroup(BackgroundLayout.createSequentialGroup()
+                                .addComponent(GuardarButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(CancelarButton)))
+                        .addGap(312, 312, 312)))
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addComponent(TelefonoLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addComponent(GuardarButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(CancelarButton)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NombresLabel)
-                            .addComponent(NombresInput, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
-                            .addComponent(APaternoLabel)
-                            .addComponent(APaternoInput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(115, 115, 115)
-                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EmailLabel)
-                            .addComponent(EmailInput, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
-                            .addComponent(DocIdLabelInput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(DocIdLabel))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TelefonoLabelInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(EmailInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+                            .addComponent(DocIdLabelInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BackgroundLayout.createSequentialGroup()
+                                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(EmailLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(DocIdLabel, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(78, 78, 78))))
         );
         BackgroundLayout.setVerticalGroup(
@@ -164,11 +200,19 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
                     .addComponent(DocIdLabelInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AMaternoLabel)
+                    .addComponent(TelefonoLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AMaternoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TelefonoLabelInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GuardarButton)
                     .addComponent(CancelarButton))
-                .addGap(88, 88, 88)
+                .addGap(18, 18, 18)
                 .addComponent(ConfrimacionInsertLabel)
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -207,8 +251,18 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_CancelarButtonActionPerformed
 
+    private void AMaternoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AMaternoInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AMaternoInputActionPerformed
+
+    private void TelefonoLabelInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoLabelInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TelefonoLabelInputActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AMaternoInput;
+    private javax.swing.JLabel AMaternoLabel;
     private javax.swing.JTextField APaternoInput;
     private javax.swing.JLabel APaternoLabel;
     private javax.swing.JPanel Background;
@@ -221,6 +275,8 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
     private javax.swing.JButton GuardarButton;
     private javax.swing.JTextField NombresInput;
     private javax.swing.JLabel NombresLabel;
+    private javax.swing.JLabel TelefonoLabel;
+    private javax.swing.JTextField TelefonoLabelInput;
     private javax.swing.JLabel Title;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
