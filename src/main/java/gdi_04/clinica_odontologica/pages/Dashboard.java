@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
 
+import javax.swing.JPanel; 
 public class Dashboard extends javax.swing.JFrame {
 
     private void InitStyles() {
@@ -36,7 +37,14 @@ public class Dashboard extends javax.swing.JFrame {
         InitStyles();
         InitContent();
     }
-
+    private void ShowJPanel(JPanel p){
+        p.setSize(750, 430);
+        p.setLocation(0, 0);
+        Content.removeAll();
+        Content.add(p, BorderLayout.CENTER);
+        Content.revalidate();
+        Content.repaint();
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -238,26 +246,32 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void RegistroDePacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroDePacienteActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Registro_de_Pacientes());
     }//GEN-LAST:event_RegistroDePacienteActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Home());
     }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void RegistroDeCitasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroDeCitasButtonActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Registro_de_Citas());
     }//GEN-LAST:event_RegistroDeCitasButtonActionPerformed
 
     private void ListadoDeCitasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListadoDeCitasButtonActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Listado_Citas());
     }//GEN-LAST:event_ListadoDeCitasButtonActionPerformed
 
     private void GestionDeEstudiantesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GestionDeEstudiantesButtonActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Gestion_de_estudiantes());
     }//GEN-LAST:event_GestionDeEstudiantesButtonActionPerformed
 
     private void GestionDePorteriaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GestionDePorteriaButtonActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Home());
     }//GEN-LAST:event_GestionDePorteriaButtonActionPerformed
 
     public static void main(String args[]) {
