@@ -1,5 +1,8 @@
 package gdi_04.clinica_odontologica.pages;
 
+import com.mycompany.clinicaapp.ClinicaApp;
+import com.mycompany.models.cita;
+
 public class Registro_de_Citas extends javax.swing.JPanel {
 
     private void InitStyles() {
@@ -240,7 +243,34 @@ public class Registro_de_Citas extends javax.swing.JPanel {
     }//GEN-LAST:event_TurnoInputActionPerformed
 
     private void GuardarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarButtonActionPerformed
-        // TODO add your handling code here:
+        cita nuevaCita = new cita();
+        try {
+            // Validación de entrada
+            nuevaCita.setDocid(Integer.parseInt(IdPacienteInput.getText()));
+            nuevaCita.setCode(Integer.parseInt(TratanteInput.getText()));
+            nuevaCita.setDay(Integer.parseInt(diaInput.getText()));
+            nuevaCita.setMonth(Integer.parseInt(mesInput1.getText()));
+            nuevaCita.setYear(Integer.parseInt(anioInput.getText()));
+            nuevaCita.setTurno(TurnoInput.getText().charAt(0));
+            nuevaCita.setMotivo(MotivoInput.getText());
+
+            // Validar que todos los campos estén llenos
+            if (nuevaCita.getMotivo().isEmpty() || TurnoInput.getText().isEmpty()) {
+                throw new IllegalArgumentException("Todos los campos son obligatorios.");
+            }
+
+            // Llamar al método para registrar la cita
+            ClinicaApp dao = new ClinicaApp();
+            dao.registrarCita(nuevaCita);
+
+            javax.swing.JOptionPane.showMessageDialog(this, "Cita registrada exitosamente.");
+        } catch (NumberFormatException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Por favor, ingresa valores válidos en los campos numéricos.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        } catch (IllegalArgumentException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error al registrar cita: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_GuardarButtonActionPerformed
 
     private void CancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarButtonActionPerformed

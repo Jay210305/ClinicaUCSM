@@ -247,28 +247,23 @@ public class Registro_de_Pacientes extends javax.swing.JPanel {
     }//GEN-LAST:event_DocIdLabelInputActionPerformed
 
     private void GuardarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarButtonActionPerformed
-        // Crear un objeto paciente
         paciente paciente = new paciente();
-
-        // Validar y asignar los datos ingresados en la UI
+        
         try {
             paciente.setDocid(Integer.parseInt(DocIdLabelInput.getText()));
             paciente.setName(NombresInput.getText());
             paciente.setApaterno(APaternoInput.getText());
             paciente.setAmaterno(AMaternoInput.getText());
             paciente.setEmail(EmailInput.getText());
-
-            // Aquí puedes agregar validaciones adicionales para los campos si es necesario
+            
             if (paciente.getName().isEmpty() || paciente.getApaterno().isEmpty() || 
                 paciente.getAmaterno().isEmpty() || paciente.getEmail().isEmpty()) {
                 throw new IllegalArgumentException("Todos los campos son obligatorios.");
             }
 
-            // Llamar al método registrarPaciente
             ClinicaApp dao = new ClinicaApp();
             dao.registrarPaciente(paciente);
 
-            // Mostrar un mensaje de éxito al usuario
             javax.swing.JOptionPane.showMessageDialog(this, "Paciente registrado exitosamente.");
 
         } catch (NumberFormatException e) {

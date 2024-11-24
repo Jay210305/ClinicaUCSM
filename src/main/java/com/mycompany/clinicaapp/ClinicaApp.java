@@ -28,7 +28,7 @@ import com.mycompany.models.paciente;
 
     public static void registrarPaciente(paciente paciente) {
         conectarBaseDeDatos();
-        String sql = "{ CALL sp_registrar_paciente(?, ?, ?, ?, ?)}";
+        String sql = "CALL sp_registrar_paciente(?, ?, ?, ?, ?)";
         try (CallableStatement cstmt = connection.prepareCall(sql)) {
             cstmt.setInt(1, paciente.getDocid());
             cstmt.setString(2, paciente.getName());
@@ -43,16 +43,16 @@ import com.mycompany.models.paciente;
     }
     
     public static void registrarCita(cita cita) {
-        String sql = "{CALL sp_registrar_cita(?, ?, ?, ?, ?, ?, ?, ?)}";
+        conectarBaseDeDatos();
+        String sql = "CALL sp_registrar_cita(?, ?, ?, ?, ?, ?, ?)";
         try (CallableStatement cstmt = connection.prepareCall(sql)) {
-            cstmt.setInt(1, cita.getNcita());
-            cstmt.setInt(2, cita.getDocid());
-            cstmt.setInt(3, cita.getCode());
-            cstmt.setInt(4, cita.getDay());
-            cstmt.setInt(5, cita.getMonth());
-            cstmt.setInt(6, cita.getYear());
-            cstmt.setInt(7, cita.getTurno());
-            cstmt.setString(8, cita.getMotivo());
+            cstmt.setInt(1, cita.getDocid());
+            cstmt.setInt(2, cita.getCode());
+            cstmt.setInt(3, cita.getDay());
+            cstmt.setInt(4, cita.getMonth());
+            cstmt.setInt(5, cita.getYear());
+            cstmt.setString(6, String.valueOf(cita.getTurno()));
+            cstmt.setString(7, cita.getMotivo());
             cstmt.execute();
             System.out.println("Cita registrada exitosamente.");
         } catch (SQLException e) {
