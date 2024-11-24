@@ -3,8 +3,10 @@ gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$4.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$4.class
 gdi_04\clinica_odontologica\pages\Home.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$11.class
+com\mycompany\models\cita.class
 gdi_04\clinica_odontologica\pages\Dashboard$2.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$1.class
+com\mycompany\models\eport.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$7.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas.class
 gdi_04\clinica_odontologica\pages\Listado_Citas$1.class
@@ -12,6 +14,7 @@ gdi_04\clinica_odontologica\pages\Listado_Citas.class
 gdi_04\clinica_odontologica\pages\Dashboard$5.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes.class
 gdi_04\clinica_odontologica\pages\Registro_de_Pacientes$3.class
+com\mycompany\clinicaapp\ClinicaApp.class
 gdi_04\clinica_odontologica\pages\Registro_de_Pacientes$4.class
 gdi_04\clinica_odontologica\Clinica_Odontologica.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$8.class
@@ -30,12 +33,16 @@ gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$9.class
 gdi_04\clinica_odontologica\pages\Listado_Citas$6.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$2.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$6.class
+com\mycompany\models\ncones.class
 gdi_04\clinica_odontologica\pages\Listado_Citas$2.class
 gdi_04\clinica_odontologica\pages\Dashboard$3.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$6.class
+com\mycompany\models\nconpa.class
 gdi_04\clinica_odontologica\pages\Registro_de_Pacientes$8.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$12.class
 gdi_04\clinica_odontologica\pages\Dashboard$1.class
+com\mycompany\models\eodonto.class
+com\mycompany\models\paciente.class
 gdi_04\clinica_odontologica\pages\Listado_Citas$5.class
 gdi_04\clinica_odontologica\pages\Registro_de_Pacientes.class
 gdi_04\clinica_odontologica\pages\Registro_de_Pacientes$6.class
@@ -43,7 +50,9 @@ gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$3.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$5.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$10.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$1.class
+com\mycompany\clinicaapp\ConexionDB.class
 gdi_04\clinica_odontologica\pages\Gestion_de_estudiantes$7.class
 gdi_04\clinica_odontologica\pages\Registro_de_Pacientes$2.class
+com\mycompany\models\listc.class
 gdi_04\clinica_odontologica\pages\Registro_de_Citas$8.class
 gdi_04\clinica_odontologica\pages\Dashboard$4.class
