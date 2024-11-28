@@ -3,8 +3,12 @@ package com.mycompany.clinicaapp;
 import com.mycompany.models.cita;
 import com.mycompany.models.eodonto;
 import com.mycompany.models.paciente;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
  import java.sql.*;
  import java.util.Scanner;
+import javax.swing.JOptionPane;
  
  public class ClinicaApp {
 
@@ -200,5 +204,135 @@ import com.mycompany.models.paciente;
             e.printStackTrace();
         }
      }
+     
+     public static void registrarEstudiante(eodonto eodonto) {
+            conectarBaseDeDatos();
+            String sql = "CALL registrar_estudiante(?, ?, ?, ?, ?)";
+            try (CallableStatement cstmt = connection.prepareCall(sql)) {
+                cstmt.setInt(1, eodonto.getCode());
+                cstmt.setString(2, eodonto.getName());
+                cstmt.setString(3, eodonto.getApaterno());
+                cstmt.setString(4, eodonto.getAmaterno());
+                cstmt.setString(5, eodonto.getEmail());
+                cstmt.execute();
+                System.out.println("Estudiante registrado exitosamente.");
+            } catch (SQLException e) {
+                System.out.println("Error al registrar estudiante: " + e.getMessage());
+        }
+    }
+    public static void eliminarEstudiante(eodonto eodonto) {
+        conectarBaseDeDatos();
+        String sql = "DELETE FROM eodonto WHERE code = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            // Codigo
+            pstmt.setInt(1, eodonto.getCode());
+
+            // Ejecuta
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Estudiante eliminado exitosamente.");
+            } else {
+                System.out.println("No se encontró un estudiante con el código especificado.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al eliminar estudiante: " + e.getMessage());
+        }
+    }
+    public static void updateEstudiante(eodonto estudiante) {
+        conectarBaseDeDatos();
+        String sql = "UPDATE eodonto SET email = ? WHERE code = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            // Parametros
+            pstmt.setString(1, estudiante.getEmail());
+            pstmt.setInt(2, estudiante.getCode());  
+
+            // Ejecucion
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Estudiante actualizado exitosamente.");
+            } else {
+                System.out.println("No se encontró un estudiante con el código especificado.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al actualizar al estudiante: " + e.getMessage());
+        }
+    }
+    public String obtenerCitasPorFecha(String fecha) {
+        StringBuilder resultado = new StringBuilder();
+        conectarBaseDeDatos();
+
+        // Extraer el día, mes y año de la fecha
+        String[] fechaPartes = fecha.split("-"); // Fecha en formato "yyyy-MM-dd"
+        int year = Integer.parseInt(fechaPartes[0]);
+        int month = Integer.parseInt(fechaPartes[1]);
+        int day = Integer.parseInt(fechaPartes[2]);
+
+        // SQL con INNER JOIN entre listc y cita
+        String sql = "SELECT c.ncita, c.docid, c.motivo, l.day, l.month, l.year " +
+                     "FROM cita c " +
+                     "INNER JOIN listc l ON c.idlist = l.id " + // Relación entre cita y listc
+                     "WHERE l.day = ? AND l.month = ? AND l.year = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+
+            // Establecer los valores de los parámetros en la consulta
+            pstmt.setInt(1, day);   // Día
+            pstmt.setInt(2, month); // Mes
+            pstmt.setInt(3, year);  // Año
+
+            // Ejecutar la consulta
+            ResultSet rs = pstmt.executeQuery();
+
+            // Procesar los resultados
+            while (rs.next()) {
+                int id = rs.getInt("ncita");
+                String paciente = rs.getString("docid"); // Información del paciente
+                String hora = rs.getString("motivo");         // Hora de la cita
+                int day1 = rs.getInt("day");                // Día de la cita (desde listc)
+                int month1 = rs.getInt("month");            // Mes de la cita (desde listc)
+                int year1 = rs.getInt("year");              // Año de la cita (desde listc)
+                resultado.append(String.format("ID: %d, Paciente: %s, Hora: %s, Fecha: %d-%d-%d\n", 
+                        id, paciente, hora, day1, month1, year1));
+            }
+
+            // Si no hay resultados
+            if (resultado.length() == 0) {
+                resultado.append("No hay citas para la fecha seleccionada.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Error al consultar las citas: " + e.getMessage();
+        }
+
+        return resultado.toString();
+    }
+
+
+    public void guardarResultadosEnArchivo(String resultado) {
+        try {
+            
+            File file = new File("citas.txt");
+
+            // Verifica si el archivo existe, si no, lo crea
+            if (!file.exists()) {
+                boolean fileCreated = file.createNewFile();
+                if (!fileCreated) {
+                    throw new Exception("No se pudo crear el archivo.");
+                }
+            }
+
+            // Escribir en el archivo
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+                writer.write("Fecha del envío del reporte: " + new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) + "\n");
+                writer.write(resultado);
+                writer.write("\n\n");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al guardar los resultados en el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
  }
  

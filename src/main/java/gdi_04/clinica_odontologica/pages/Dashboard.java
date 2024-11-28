@@ -59,6 +59,7 @@ public class Dashboard extends javax.swing.JFrame {
         GestionDePorteriaButton = new javax.swing.JButton();
         UCSM = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        GestionDePorteriaButton1 = new javax.swing.JButton();
         TopBarPanel = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         Fecha = new javax.swing.JLabel();
@@ -124,12 +125,25 @@ public class Dashboard extends javax.swing.JFrame {
         jSeparator1.setBackground(new java.awt.Color(29, 90, 126));
         jSeparator1.setForeground(new java.awt.Color(29, 90, 126));
 
+        GestionDePorteriaButton1.setText("Filtros");
+        GestionDePorteriaButton1.setPreferredSize(new java.awt.Dimension(306, 55));
+        GestionDePorteriaButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GestionDePorteriaButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout SideBarPanelLayout = new javax.swing.GroupLayout(SideBarPanel);
         SideBarPanel.setLayout(SideBarPanelLayout);
         SideBarPanelLayout.setHorizontalGroup(
             SideBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideBarPanelLayout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(UCSM)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(SideBarPanelLayout.createSequentialGroup()
                 .addGroup(SideBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(SideBarPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(SideBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,13 +152,9 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(RegistroDeCitasButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ListadoDeCitasButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(GestionDeEstudiantesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(GestionDePorteriaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(GestionDePorteriaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(GestionDePorteriaButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
-            .addGroup(SideBarPanelLayout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(UCSM)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SideBarPanelLayout.setVerticalGroup(
             SideBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +175,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(GestionDeEstudiantesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(GestionDePorteriaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(GestionDePorteriaButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         TopBarPanel.setBackground(new java.awt.Color(29, 90, 149));
@@ -270,9 +282,14 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_GestionDeEstudiantesButtonActionPerformed
 
     private void GestionDePorteriaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GestionDePorteriaButtonActionPerformed
-        // TODO add your handling code here:
-        ShowJPanel(new Home());
+        Porteria porteria = new Porteria();
+                    porteria.setVisible(true);
     }//GEN-LAST:event_GestionDePorteriaButtonActionPerformed
+
+    private void GestionDePorteriaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GestionDePorteriaButton1ActionPerformed
+        
+        ShowJPanel(new Filtros());
+    }//GEN-LAST:event_GestionDePorteriaButton1ActionPerformed
 
     public static void main(String args[]) {
 
@@ -290,6 +307,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Fecha;
     private javax.swing.JButton GestionDeEstudiantesButton;
     private javax.swing.JButton GestionDePorteriaButton;
+    private javax.swing.JButton GestionDePorteriaButton1;
     private javax.swing.JButton HomeButton;
     private javax.swing.JButton ListadoDeCitasButton;
     private javax.swing.JButton RegistroDeCitasButton;

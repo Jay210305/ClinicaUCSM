@@ -1,5 +1,9 @@
 package gdi_04.clinica_odontologica.pages;
 
+import com.mycompany.clinicaapp.ClinicaApp;
+import com.mycompany.models.eodonto;
+import javax.swing.JOptionPane;
+
 public class Gestion_de_estudiantes extends javax.swing.JPanel {
 
     private void InitStyles() {
@@ -10,7 +14,10 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
         initComponents();
         InitStyles();
     }
-    
+    private void CrearButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
+
+    }                                              
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -18,35 +25,35 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         Background = new javax.swing.JPanel();
-        APaternoInput = new javax.swing.JTextField();
-        NombresInput = new javax.swing.JTextField();
+        APaternoInsert = new javax.swing.JTextField();
+        UpdateValor = new javax.swing.JTextField();
         NombresLabel = new javax.swing.JLabel();
         APaternoLabel = new javax.swing.JLabel();
         Title = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        APaternoLabel1 = new javax.swing.JLabel();
-        APaternoInput1 = new javax.swing.JTextField();
-        APaternoInput2 = new javax.swing.JTextField();
-        APaternoLabel2 = new javax.swing.JLabel();
-        APaternoInput3 = new javax.swing.JTextField();
-        APaternoLabel3 = new javax.swing.JLabel();
+        AmaternoLabel = new javax.swing.JLabel();
+        CodigoInsert = new javax.swing.JTextField();
+        AmaternoInsert = new javax.swing.JTextField();
+        CodigoLabel = new javax.swing.JLabel();
+        EmailInsert = new javax.swing.JTextField();
+        EmailLabel = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         NombresLabel1 = new javax.swing.JLabel();
-        NombresInput1 = new javax.swing.JTextField();
+        NombreInsert = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        crear = new javax.swing.JToggleButton();
+        UpdateCombo = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        NombresInput3 = new javax.swing.JTextField();
+        NumeroInsert = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        NombresInput2 = new javax.swing.JTextField();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        UpdateCodigo = new javax.swing.JTextField();
+        UpdateButton = new javax.swing.JToggleButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        NombresInput4 = new javax.swing.JTextField();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        EliminarCodigo = new javax.swing.JTextField();
+        eliminarButton = new javax.swing.JToggleButton();
         jLabel7 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -66,17 +73,17 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
 
         Background.setPreferredSize(new java.awt.Dimension(960, 620));
 
-        APaternoInput.setPreferredSize(new java.awt.Dimension(325, 35));
-        APaternoInput.addActionListener(new java.awt.event.ActionListener() {
+        APaternoInsert.setPreferredSize(new java.awt.Dimension(325, 35));
+        APaternoInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                APaternoInputActionPerformed(evt);
+                APaternoInsertActionPerformed(evt);
             }
         });
 
-        NombresInput.setPreferredSize(new java.awt.Dimension(325, 35));
-        NombresInput.addActionListener(new java.awt.event.ActionListener() {
+        UpdateValor.setPreferredSize(new java.awt.Dimension(325, 35));
+        UpdateValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombresInputActionPerformed(evt);
+                UpdateValorActionPerformed(evt);
             }
         });
 
@@ -88,39 +95,39 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
 
         jLabel1.setText("Nuevo Estudiante");
 
-        APaternoLabel1.setText("Apellido Paterno");
+        AmaternoLabel.setText("Apellido Materno");
 
-        APaternoInput1.setPreferredSize(new java.awt.Dimension(325, 35));
-        APaternoInput1.addActionListener(new java.awt.event.ActionListener() {
+        CodigoInsert.setPreferredSize(new java.awt.Dimension(325, 35));
+        CodigoInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                APaternoInput1ActionPerformed(evt);
+                CodigoInsertActionPerformed(evt);
             }
         });
 
-        APaternoInput2.setPreferredSize(new java.awt.Dimension(325, 35));
-        APaternoInput2.addActionListener(new java.awt.event.ActionListener() {
+        AmaternoInsert.setPreferredSize(new java.awt.Dimension(325, 35));
+        AmaternoInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                APaternoInput2ActionPerformed(evt);
+                AmaternoInsertActionPerformed(evt);
             }
         });
 
-        APaternoLabel2.setText("Codigo estudiante");
+        CodigoLabel.setText("Codigo estudiante");
 
-        APaternoInput3.setPreferredSize(new java.awt.Dimension(325, 35));
-        APaternoInput3.addActionListener(new java.awt.event.ActionListener() {
+        EmailInsert.setPreferredSize(new java.awt.Dimension(325, 35));
+        EmailInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                APaternoInput3ActionPerformed(evt);
+                EmailInsertActionPerformed(evt);
             }
         });
 
-        APaternoLabel3.setText("Email");
+        EmailLabel.setText("Email");
 
         NombresLabel1.setText("Número de telefono");
 
-        NombresInput1.setPreferredSize(new java.awt.Dimension(325, 35));
-        NombresInput1.addActionListener(new java.awt.event.ActionListener() {
+        NombreInsert.setPreferredSize(new java.awt.Dimension(325, 35));
+        NombreInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombresInput1ActionPerformed(evt);
+                NombreInsertActionPerformed(evt);
             }
         });
 
@@ -140,37 +147,42 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
             .addGap(0, 221, Short.MAX_VALUE)
         );
 
-        jToggleButton1.setText("Crear");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        crear.setText("Crear");
+        crear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                crearActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        UpdateCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Email" }));
+        UpdateCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateComboActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Info. a modificar");
 
-        NombresInput3.setPreferredSize(new java.awt.Dimension(325, 35));
-        NombresInput3.addActionListener(new java.awt.event.ActionListener() {
+        NumeroInsert.setPreferredSize(new java.awt.Dimension(325, 35));
+        NumeroInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombresInput3ActionPerformed(evt);
+                NumeroInsertActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Ingrese el codigo del estudiante");
 
-        NombresInput2.setPreferredSize(new java.awt.Dimension(325, 35));
-        NombresInput2.addActionListener(new java.awt.event.ActionListener() {
+        UpdateCodigo.setPreferredSize(new java.awt.Dimension(325, 35));
+        UpdateCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombresInput2ActionPerformed(evt);
+                UpdateCodigoActionPerformed(evt);
             }
         });
 
-        jToggleButton2.setText("Aceptar");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        UpdateButton.setText("Aceptar");
+        UpdateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                UpdateButtonActionPerformed(evt);
             }
         });
 
@@ -178,21 +190,21 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
 
         jLabel6.setText("Ingrese el codigo del estudiante");
 
-        NombresInput4.setPreferredSize(new java.awt.Dimension(325, 35));
-        NombresInput4.addActionListener(new java.awt.event.ActionListener() {
+        EliminarCodigo.setPreferredSize(new java.awt.Dimension(325, 35));
+        EliminarCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombresInput4ActionPerformed(evt);
+                EliminarCodigoActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setText("jToggleButton3");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        eliminarButton.setText("Eliminar");
+        eliminarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                eliminarButtonActionPerformed(evt);
             }
         });
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setText("¿Dese eliminar al estudiante?");
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
@@ -203,9 +215,9 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
                 .addContainerGap(44, Short.MAX_VALUE)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addComponent(NombresInput3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(NumeroInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jToggleButton1))
+                        .addComponent(crear))
                     .addComponent(NombresLabel1)
                     .addComponent(jLabel1)
                     .addComponent(Title)
@@ -215,25 +227,25 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
                                 .addComponent(NombresLabel)
                                 .addGap(121, 121, 121))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                                .addComponent(NombresInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(NombreInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)))
                         .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(BackgroundLayout.createSequentialGroup()
-                                .addComponent(APaternoInput, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(APaternoInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(APaternoInput2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AmaternoInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(BackgroundLayout.createSequentialGroup()
                                 .addComponent(APaternoLabel)
                                 .addGap(85, 85, 85)
-                                .addComponent(APaternoLabel1)))
+                                .addComponent(AmaternoLabel)))
                         .addGap(18, 18, 18)
                         .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(APaternoInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(APaternoLabel2))
+                            .addComponent(CodigoInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CodigoLabel))
                         .addGap(18, 18, 18)
                         .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(APaternoLabel3)
-                            .addComponent(APaternoInput3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(EmailLabel)
+                            .addComponent(EmailInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(44, 44, 44))
             .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(BackgroundLayout.createSequentialGroup()
@@ -245,15 +257,15 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
                                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(NombresInput2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                    .addComponent(UpdateCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                                 .addGap(267, 267, 267))
                             .addGroup(BackgroundLayout.createSequentialGroup()
                                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(BackgroundLayout.createSequentialGroup()
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(UpdateCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(NombresInput, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jToggleButton2))
+                                        .addComponent(UpdateValor, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(UpdateButton))
                                 .addGap(18, 18, 18)))
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2))
@@ -261,9 +273,9 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(NombresInput4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(EliminarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel5)
-                    .addComponent(jToggleButton3)
+                    .addComponent(eliminarButton)
                     .addComponent(jLabel7))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -280,22 +292,22 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NombresLabel)
                     .addComponent(APaternoLabel)
-                    .addComponent(APaternoLabel1)
-                    .addComponent(APaternoLabel2)
-                    .addComponent(APaternoLabel3))
+                    .addComponent(AmaternoLabel)
+                    .addComponent(CodigoLabel)
+                    .addComponent(EmailLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(APaternoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(APaternoInput2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(APaternoInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(APaternoInput3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombresInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(APaternoInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AmaternoInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CodigoInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EmailInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NombreInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(NombresLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombresInput3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(crear, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NumeroInsert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -308,25 +320,25 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
                             .addGroup(BackgroundLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(NombresInput2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(UpdateCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NombresInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(UpdateCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(UpdateValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jToggleButton2))))
+                                .addComponent(UpdateButton))))
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(NombresInput4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EliminarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addComponent(jToggleButton3)))
+                        .addComponent(eliminarButton)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
@@ -342,74 +354,154 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void APaternoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APaternoInputActionPerformed
+    private void APaternoInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APaternoInsertActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_APaternoInputActionPerformed
+    }//GEN-LAST:event_APaternoInsertActionPerformed
 
-    private void NombresInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombresInputActionPerformed
+    private void UpdateValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateValorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombresInputActionPerformed
+    }//GEN-LAST:event_UpdateValorActionPerformed
 
-    private void APaternoInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APaternoInput1ActionPerformed
+    private void CodigoInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoInsertActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_APaternoInput1ActionPerformed
+    }//GEN-LAST:event_CodigoInsertActionPerformed
 
-    private void APaternoInput2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APaternoInput2ActionPerformed
+    private void AmaternoInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmaternoInsertActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_APaternoInput2ActionPerformed
+    }//GEN-LAST:event_AmaternoInsertActionPerformed
 
-    private void APaternoInput3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APaternoInput3ActionPerformed
+    private void EmailInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailInsertActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_APaternoInput3ActionPerformed
+    }//GEN-LAST:event_EmailInsertActionPerformed
 
-    private void NombresInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombresInput1ActionPerformed
+    private void NombreInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreInsertActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombresInput1ActionPerformed
+    }//GEN-LAST:event_NombreInsertActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearActionPerformed
+        // Crear un objeto eodonto
+        eodonto estudiante = new eodonto();
+
+        // Validar y asignar los datos ingresados en la UI
+        try {
+            estudiante.setCode(Integer.parseInt(CodigoInsert.getText()));
+            estudiante.setName(NombreInsert.getText());
+            estudiante.setApaterno(APaternoInsert.getText());
+            estudiante.setAmaterno(AmaternoInsert.getText());
+            estudiante.setEmail(EmailInsert.getText());
+
+            // Validaciones adicionales para los campos
+            if (estudiante.getName().isEmpty() || estudiante.getApaterno().isEmpty() || 
+                estudiante.getAmaterno().isEmpty() || estudiante.getEmail().isEmpty()) {
+                throw new IllegalArgumentException("Todos los campos son obligatorios.");
+            }
+
+            // Llamar al método registrarEstudiante
+            ClinicaApp dao = new ClinicaApp(); // Reutilizamos la lógica desde esta clase
+            dao.registrarEstudiante(estudiante);
+
+            // Mostrar un mensaje de éxito al usuario
+            javax.swing.JOptionPane.showMessageDialog(this, "Estudiante registrado exitosamente.");
+
+        } catch (NumberFormatException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "El código debe ser un número válido.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        } catch (IllegalArgumentException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error al registrar estudiante: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }    }//GEN-LAST:event_crearActionPerformed
+
+    private void NumeroInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroInsertActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_NumeroInsertActionPerformed
 
-    private void NombresInput3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombresInput3ActionPerformed
+    private void UpdateCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombresInput3ActionPerformed
+    }//GEN-LAST:event_UpdateCodigoActionPerformed
 
-    private void NombresInput2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombresInput2ActionPerformed
+    private void UpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombresInput2ActionPerformed
+        eodonto estudiante = new eodonto();
+        try{
+            estudiante.setCode(Integer.parseInt(UpdateCodigo.getText()));
+            estudiante.setEmail(UpdateValor.getText());
+            if (UpdateCodigo.getText().isEmpty() || estudiante.getEmail().isEmpty()) {
+                throw new IllegalArgumentException("El código es obligatorio y debe ser un número y el email a cambiar tambien");
+            }
+            ClinicaApp dao = new ClinicaApp(); // Reutilizamos la lógica desde esta clase
+            dao.updateEstudiante(estudiante);
+            javax.swing.JOptionPane.showMessageDialog(this, "Estudiante actualizado exitosamente.");
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        }
+         catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error al actualizar al estudiante: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+
+        
+        
+    }//GEN-LAST:event_UpdateButtonActionPerformed
+
+    private void EliminarCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
-    private void NombresInput4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombresInput4ActionPerformed
+
+    }//GEN-LAST:event_EliminarCodigoActionPerformed
+
+    private void eliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombresInput4ActionPerformed
+        eodonto estudiante = new eodonto();
+        try{
+            estudiante.setCode(Integer.parseInt(EliminarCodigo.getText()));
+            if (EliminarCodigo.getText().isEmpty()) {
+                throw new IllegalArgumentException("El código es obligatorio y debe ser un número.");
+            }
+            ClinicaApp dao = new ClinicaApp(); // Reutilizamos la lógica desde esta clase
+            dao.eliminarEstudiante(estudiante);
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+            // Mostrar un mensaje de éxito al usuario
+            javax.swing.JOptionPane.showMessageDialog(this, "Estudiante eliminado exitosamente.");
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error al elimnar al estudiante: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_eliminarButtonActionPerformed
+
+    private void UpdateComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateComboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-
+    }//GEN-LAST:event_UpdateComboActionPerformed
+    private javax.swing.JButton crearButton;
+    private javax.swing.JButton aceptarButton;
+    private javax.swing.JTextField nombresTextField;
+    private javax.swing.JTextField apaternoTextField;
+    private javax.swing.JTextField amaternoTextField;
+    private javax.swing.JTextField codigoTextField;
+    private javax.swing.JTextField emailTextField;
+    private javax.swing.JTextField telefonoTextField;
+    private javax.swing.JTextField codigoActualizarTextField;
+    private javax.swing.JComboBox<String> columnaComboBox;
+    private javax.swing.JTextField nuevoValorTextField;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField APaternoInput;
-    private javax.swing.JTextField APaternoInput1;
-    private javax.swing.JTextField APaternoInput2;
-    private javax.swing.JTextField APaternoInput3;
+    private javax.swing.JTextField APaternoInsert;
     private javax.swing.JLabel APaternoLabel;
-    private javax.swing.JLabel APaternoLabel1;
-    private javax.swing.JLabel APaternoLabel2;
-    private javax.swing.JLabel APaternoLabel3;
+    private javax.swing.JTextField AmaternoInsert;
+    private javax.swing.JLabel AmaternoLabel;
     private javax.swing.JPanel Background;
-    private javax.swing.JTextField NombresInput;
-    private javax.swing.JTextField NombresInput1;
-    private javax.swing.JTextField NombresInput2;
-    private javax.swing.JTextField NombresInput3;
-    private javax.swing.JTextField NombresInput4;
+    private javax.swing.JTextField CodigoInsert;
+    private javax.swing.JLabel CodigoLabel;
+    private javax.swing.JTextField EliminarCodigo;
+    private javax.swing.JTextField EmailInsert;
+    private javax.swing.JLabel EmailLabel;
+    private javax.swing.JTextField NombreInsert;
     private javax.swing.JLabel NombresLabel;
     private javax.swing.JLabel NombresLabel1;
+    private javax.swing.JTextField NumeroInsert;
     private javax.swing.JLabel Title;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JToggleButton UpdateButton;
+    private javax.swing.JTextField UpdateCodigo;
+    private javax.swing.JComboBox<String> UpdateCombo;
+    private javax.swing.JTextField UpdateValor;
+    private javax.swing.JToggleButton crear;
+    private javax.swing.JToggleButton eliminarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -422,8 +514,5 @@ public class Gestion_de_estudiantes extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
     // End of variables declaration//GEN-END:variables
 }

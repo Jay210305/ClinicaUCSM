@@ -69,9 +69,9 @@
                   <EmptySpace pref="44" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="NombresInput3" min="-2" pref="160" max="-2" attributes="0"/>
+                          <Component id="NumeroInsert" min="-2" pref="160" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="crear" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="NombresLabel1" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -83,31 +83,31 @@
                                   <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="NombresInput1" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="NombreInsert" min="-2" pref="160" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="APaternoInput" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="APaternoInsert" min="-2" pref="160" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="APaternoInput2" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="AmaternoInsert" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="APaternoLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                                  <Component id="APaternoLabel1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AmaternoLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="APaternoInput1" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                              <Component id="APaternoLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="CodigoInsert" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="CodigoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="APaternoLabel3" min="-2" max="-2" attributes="0"/>
-                              <Component id="APaternoInput3" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="EmailLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="EmailInsert" min="-2" pref="160" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -123,18 +123,18 @@
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="NombresInput2" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="UpdateCodigo" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jComboBox1" min="-2" pref="157" max="-2" attributes="0"/>
+                                          <Component id="UpdateCombo" min="-2" pref="157" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="NombresInput" min="-2" pref="244" max="-2" attributes="0"/>
+                                          <Component id="UpdateValor" min="-2" pref="244" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jToggleButton2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="UpdateButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                               </Group>
@@ -147,10 +147,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
-                          <Component id="NombresInput4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="EliminarCodigo" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jToggleButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eliminarButton" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -170,24 +170,24 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="NombresLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="APaternoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="APaternoLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="APaternoLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="APaternoLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AmaternoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CodigoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="EmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="APaternoInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="APaternoInput2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="APaternoInput1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="APaternoInput3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NombresInput1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="APaternoInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AmaternoInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CodigoInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="EmailInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NombreInsert" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="NombresLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jToggleButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="NombresInput3" alignment="3" max="32767" attributes="0"/>
+                      <Component id="crear" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="NumeroInsert" alignment="3" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
@@ -201,16 +201,16 @@
                               <Group type="102" attributes="0">
                                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="NombresInput2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="UpdateCodigo" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jComboBox1" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="NombresInput" min="-2" max="-2" attributes="0"/>
+                                      <Component id="UpdateCombo" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="UpdateValor" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jToggleButton2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="UpdateButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -219,11 +219,11 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="NombresInput4" min="-2" max="-2" attributes="0"/>
+                          <Component id="EliminarCodigo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jToggleButton3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eliminarButton" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="36" max="32767" attributes="0"/>
@@ -232,24 +232,24 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="APaternoInput">
+        <Component class="javax.swing.JTextField" name="APaternoInsert">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="APaternoInputActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="APaternoInsertActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="NombresInput">
+        <Component class="javax.swing.JTextField" name="UpdateValor">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombresInputActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpdateValorActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="NombresLabel">
@@ -272,47 +272,47 @@
             <Property name="text" type="java.lang.String" value="Nuevo Estudiante"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="APaternoLabel1">
+        <Component class="javax.swing.JLabel" name="AmaternoLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido Paterno"/>
+            <Property name="text" type="java.lang.String" value="Apellido Materno"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="APaternoInput1">
-          <Properties>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[325, 35]"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="APaternoInput1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="APaternoInput2">
+        <Component class="javax.swing.JTextField" name="CodigoInsert">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="APaternoInput2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CodigoInsertActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="APaternoLabel2">
+        <Component class="javax.swing.JTextField" name="AmaternoInsert">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[325, 35]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AmaternoInsertActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="CodigoLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Codigo estudiante"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="APaternoInput3">
+        <Component class="javax.swing.JTextField" name="EmailInsert">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="APaternoInput3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmailInsertActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="APaternoLabel3">
+        <Component class="javax.swing.JLabel" name="EmailLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Email"/>
           </Properties>
@@ -324,14 +324,14 @@
             <Property name="text" type="java.lang.String" value="N&#xfa;mero de telefono"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="NombresInput1">
+        <Component class="javax.swing.JTextField" name="NombreInsert">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombresInput1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombreInsertActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator3">
@@ -364,25 +364,25 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+        <Component class="javax.swing.JToggleButton" name="crear">
           <Properties>
             <Property name="text" type="java.lang.String" value="Crear"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="UpdateCombo">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="1">
+                <StringItem index="0" value="Email"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpdateComboActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
@@ -392,14 +392,14 @@
             <Property name="text" type="java.lang.String" value="Info. a modificar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="NombresInput3">
+        <Component class="javax.swing.JTextField" name="NumeroInsert">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombresInput3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NumeroInsertActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -407,22 +407,22 @@
             <Property name="text" type="java.lang.String" value="Ingrese el codigo del estudiante"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="NombresInput2">
+        <Component class="javax.swing.JTextField" name="UpdateCodigo">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombresInput2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpdateCodigoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JToggleButton" name="jToggleButton2">
+        <Component class="javax.swing.JToggleButton" name="UpdateButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpdateButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -435,27 +435,27 @@
             <Property name="text" type="java.lang.String" value="Ingrese el codigo del estudiante"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="NombresInput4">
+        <Component class="javax.swing.JTextField" name="EliminarCodigo">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[325, 35]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombresInput4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EliminarCodigoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JToggleButton" name="jToggleButton3">
+        <Component class="javax.swing.JToggleButton" name="eliminarButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jToggleButton3"/>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel7"/>
+            <Property name="text" type="java.lang.String" value="&#xbf;Dese eliminar al estudiante?"/>
           </Properties>
         </Component>
       </SubComponents>
